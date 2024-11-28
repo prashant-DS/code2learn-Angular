@@ -1,11 +1,27 @@
-import { NgClass, NgStyle } from '@angular/common';
+import {
+  NgClass,
+  NgFor,
+  NgIf,
+  NgStyle,
+  NgSwitch,
+  NgSwitchCase,
+  NgSwitchDefault,
+} from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, NgClass, NgStyle],
+  imports: [
+    FormsModule,
+    NgClass,
+    NgStyle,
+    NgIf,
+    NgFor,
+    NgSwitch,
+    NgSwitchCase,
+    NgSwitchDefault,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -37,4 +53,13 @@ export class AppComponent {
   message = 'Hello World';
   messageClass = 'greet';
   messageTextTransform = 'uppercase';
+
+  // structural directive
+  isLoggedIn = true;
+  users = [
+    { name: 'Alice', role: 'admin' },
+    { name: 'Bob', role: 'editor' },
+    { name: 'Charlie', role: 'viewer' },
+    { name: 'Diana', role: 'admin' },
+  ];
 }

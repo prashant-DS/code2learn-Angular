@@ -30,3 +30,26 @@
     }}</span>
   </div>
 </div>
+
+<div class="box">
+  <h1>Structure directive</h1>
+  <label for="isLoggedIn">Is User Logged In?</label>
+  <input id="isLoggedIn" type="checkbox" [(ngModel)]="isLoggedIn" />
+  <div *ngIf="isLoggedIn; else elseBlock">
+    <h2>Welcome</h2>
+  </div>
+  <ng-template #elseBlock> <h2>Please Login</h2></ng-template>
+
+  <div *ngIf="isLoggedIn">
+    <h3>List of Users</h3>
+    <div *ngFor="let user of users; let rank = index">
+      <span>{{ rank + 1 }}. {{ user.name }} ({{ user.role }}) - </span>
+      <span [ngSwitch]="user.role">
+        <span *ngSwitchCase="'admin'">Can do anything</span>
+        <span *ngSwitchCase="'editor'">Can view and edit</span>
+        <span *ngSwitchCase="'viewer'">can only view</span>
+        <span *ngSwitchDefault>NA</span>
+      </span>
+    </div>
+  </div>
+</div>
