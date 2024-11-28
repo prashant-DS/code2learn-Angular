@@ -53,3 +53,29 @@
     </div>
   </div>
 </div>
+
+<div class="box">
+  <h1>control flow directive</h1>
+  <label for="isLoggedIn">Is User Logged In?</label>
+  <input id="isLoggedIn" type="checkbox" [(ngModel)]="isLoggedIn" />
+  @if(isLoggedIn){
+  <h2>Welcome</h2>
+  }@else {
+  <h2>Please Login</h2>
+  } @if(isLoggedIn){
+  <h3>List of Users</h3>
+  @for(user of users; track user.name; let rank=$index){
+  <span>
+    <span>{{ rank + 1 }}. {{ user.name }} ({{ user.role }}) - </span>
+    @switch (user.role) { @case ('admin') {
+    <span>Can do anything</span>
+    } @case ('editor') {
+    <span>Can view and edit</span>
+    } @case ('viewer') {
+    <span>can only view</span>
+    } @default {
+    <span>NA</span>
+    } }
+  </span>
+  } }
+</div>

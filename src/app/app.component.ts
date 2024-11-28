@@ -62,4 +62,7 @@ export class AppComponent {
     { name: 'Charlie', role: 'viewer' },
     { name: 'Diana', role: 'admin' },
   ];
+
+  // control flow
+  // same example as above
 }
