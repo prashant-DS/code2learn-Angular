@@ -55,7 +55,7 @@
 </div>
 
 <div class="box">
-  <h1>control flow directive</h1>
+  <h1>Control flow directive</h1>
   <label for="isLoggedIn">Is User Logged In?</label>
   <input id="isLoggedIn" type="checkbox" [(ngModel)]="isLoggedIn" />
   @if(isLoggedIn){
@@ -78,4 +78,32 @@
     } }
   </span>
   } }
+</div>
+
+<div class="box">
+  <h1>Pipe</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Launch Date</th>
+        <th>Availability</th>
+        <th>Manufacturer</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(item of products; track item.id ){
+      <tr>
+        <td>{{ item.name | uppercase }}</td>
+        <td>{{ item.price | currency : "INR" : "symbol" : "1.0-1" }}</td>
+        <td>{{ item.discount | percent }}</td>
+        <td>{{ item.launchDate | date : "MM/yy" }}</td>
+        <td>{{ item.availability | lowercase }}</td>
+        <td>{{ item.company | titleCase }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
 </div>
