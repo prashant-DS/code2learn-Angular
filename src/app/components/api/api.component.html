@@ -1,2 +1,7 @@
 <p>Data from constructor {{ data }}</p>
 <p>{{ posts.length }} posts fetched from api</p>
+
+<div *ngIf="userName | async as userName">
+  <h3>Hey {{ userName.firstName }} {{ userName.lastName }}</h3>
+  <p>{{ userName | json }}</p>
+</div>

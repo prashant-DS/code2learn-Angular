@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { first, Observable, of } from 'rxjs';
 import { PostsDataObject } from '../components/api/interfaces/posts-data';
+import { UserName } from '../components/api/interfaces/user-name';
 
 @Injectable({
   providedIn: 'root',
@@ -17,5 +18,9 @@ export class FetchApiService {
 
   getPosts(): Observable<PostsDataObject[]> {
     return this.http.get<PostsDataObject[]>(this.apiUrl);
+  }
+
+  getUserName(): Observable<UserName> {
+    return of({ firstName: 'John', lastName: 'Doe' });
   }
 }
