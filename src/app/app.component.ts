@@ -15,6 +15,7 @@ import {
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TitleCasePipe } from './pipe/title-case.pipe';
+import { ApiComponent } from './components/api/api.component';
 
 @Component({
   selector: 'app-root',
@@ -33,6 +34,7 @@ import { TitleCasePipe } from './pipe/title-case.pipe';
     PercentPipe,
     CurrencyPipe,
     TitleCasePipe,
+    ApiComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
