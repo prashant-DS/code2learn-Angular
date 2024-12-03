@@ -10,7 +10,6 @@ interface User {
   selector: 'app-template-driven-form',
   imports: [FormsModule],
   templateUrl: './template-driven-form.component.html',
-  styleUrl: './template-driven-form.component.scss',
 })
 export class TemplateDrivenFormComponent {
   user: User = {
