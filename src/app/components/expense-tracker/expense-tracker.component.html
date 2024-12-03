@@ -1,0 +1,23 @@
+<div class="actionContainer">
+  <div class="action">
+    <label for="income">Income</label>
+    <input id="income" type="number" [(ngModel)]="tempIncomeValue" />
+    <button (click)="addIncome()">Add Income</button>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="action">
+    <label for="expense">Expense</label>
+    <input id="expense" type="number" [(ngModel)]="tempExpenseValue" />
+    <button (click)="addExpense()">Add Expense</button>
+  </div>
+</div>
+
+<div class="info">
+  <span>Income: {{ totalIncome() }}</span>
+  <span>Expense: {{ totalExpense() }}</span>
+  <h3 [ngClass]="remainingBalance() < 0 ? 'warn' : 'normal'">
+    Balance: {{ remainingBalance() }}
+  </h3>
+</div>

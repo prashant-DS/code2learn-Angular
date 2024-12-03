@@ -16,6 +16,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TitleCasePipe } from './pipe/title-case.pipe';
 import { ApiComponent } from './components/api/api.component';
+import { ExpenseTrackerComponent } from './components/expense-tracker/expense-tracker.component';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +36,7 @@ import { ApiComponent } from './components/api/api.component';
     CurrencyPipe,
     TitleCasePipe,
     ApiComponent,
+    ExpenseTrackerComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
