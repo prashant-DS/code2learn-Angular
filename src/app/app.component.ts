@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { TitleCasePipe } from './pipe/title-case.pipe';
 import { ApiComponent } from './components/api/api.component';
 import { ExpenseTrackerComponent } from './components/expense-tracker/expense-tracker.component';
+import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
 
 @Component({
   selector: 'app-root',
@@ -37,6 +38,7 @@ import { ExpenseTrackerComponent } from './components/expense-tracker/expense-tr
     TitleCasePipe,
     ApiComponent,
     ExpenseTrackerComponent,
+    TemplateDrivenFormComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
