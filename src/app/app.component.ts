@@ -18,6 +18,7 @@ import { TitleCasePipe } from './pipe/title-case.pipe';
 import { ApiComponent } from './components/api/api.component';
 import { ExpenseTrackerComponent } from './components/expense-tracker/expense-tracker.component';
 import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 @Component({
   selector: 'app-root',
@@ -39,6 +40,7 @@ import { TemplateDrivenFormComponent } from './components/template-driven-form/t
     ApiComponent,
     ExpenseTrackerComponent,
     TemplateDrivenFormComponent,
+    ReactiveFormComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
